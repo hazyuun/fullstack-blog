@@ -1,0 +1,7 @@
+node_modules
+.env
+production.env
+.next
+.gitignore
+.git/
+Dockerfile

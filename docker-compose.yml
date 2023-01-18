@@ -1,0 +1,55 @@
+version: "3"
+
+services:
+  database:
+    tty: true
+    build:
+      context: ./database
+      dockerfile: Dockerfile
+    ports:
+      - 2000:5432
+    env_file:
+      - ./database/.env
+    networks:
+      - network
+
+  redis:
+    tty: true
+    build:
+      context: ./redis
+      dockerfile: Dockerfile
+      
+    # Redis port should only be exposed in development environment
+    # ports:
+    #   - 6000:6379
+    env_file:
+      - ./redis/.env
+    networks:
+      - network
+      
+  backend:
+    tty: true
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 4000:80
+    env_file:
+      - ./backend/production.env
+    networks:
+      - network
+  
+  frontend:
+    tty: true
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    env_file:
+      - ./frontend/production.env
+    networks:
+      - network
+
+networks:
+  network:
