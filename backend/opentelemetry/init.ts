@@ -12,7 +12,10 @@ diag.setLogger(new DiagConsoleLogger(), DiagLogLevel.INFO);
 const sdk = new opentelemetry.NodeSDK({
   serviceName: "Blog",
   autoDetectResources: true,
-  traceExporter: new JaegerExporter(),
+  traceExporter: new JaegerExporter({
+    host: process.env.JAEGER_HOST ? process.env.JAEGER_HOST : 'jaeger',
+    port: process.env.JAEGER_PORT ? JSON.parse(process.env.JAEGER_PORT) : 6832,
+  }),
   instrumentations: [
     getNodeAutoInstrumentations(), 
     new PrismaInstrumentation()
