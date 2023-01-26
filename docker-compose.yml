@@ -58,7 +58,7 @@ services:
   grafana:
     image: grafana/grafana:main
     ports:
-      - 3000:3000
+      - 8080:3000
     restart: unless-stopped
     user: "1000"
     volumes:
