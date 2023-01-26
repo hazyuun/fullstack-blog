@@ -3,7 +3,6 @@ import * as dotenv from "dotenv";
 import { logger } from "./util/logging";
 import { setup } from "./setup";
 
-
 dotenv.config();
 
 const app = Express();

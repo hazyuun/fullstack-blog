@@ -1,3 +1,3 @@
 #!/bin/sh
 npx prisma migrate deploy
-node index.js
+node -r ./opentelemetry/init.js index.js
