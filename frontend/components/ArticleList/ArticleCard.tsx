@@ -48,17 +48,19 @@ export default function ArticleCard(props: ArticleCardProps) {
         className="max-h-64 w-full rounded-md rounded-b-none"
         src="/article_default.jpg"
         alt=""
+        width={3840}
+        height={2160}
       />
       <div className="flex flex-grow flex-col p-4">
         <span onClick={cardOnClick} className="text-2xl">
           {props.article.title}
         </span>
-        <p
+        <div
           onClick={cardOnClick}
           className="text-md flex-grow text-gray-600 line-clamp-6"
         >
           <ReactMarkdown>{props.article.content || ""}</ReactMarkdown>
-        </p>
+        </div>
 
         <div className="flex justify-between">
           <span
@@ -69,6 +71,8 @@ export default function ArticleCard(props: ArticleCardProps) {
               className="aspect-square w-7 rounded-full border border-slate-100"
               src={profilePicture}
               alt=""
+              width={500}
+              height={500}
             />
             <span>
               {props.user?.username || props.article.author?.username}

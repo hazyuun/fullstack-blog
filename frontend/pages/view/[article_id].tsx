@@ -46,9 +46,11 @@ export default function ArticleView(props: ArticleViewProps) {
             className="absolute top-0 left-0 right-0 bottom-0 -z-10 h-full w-full object-cover brightness-50"
             src="/article_default.jpg"
             alt=""
+            width={3840}
+            height={2160}
           />
 
-          <h1 className="text-4xl">{props.article.title}</h1>
+          <h1 className="text-xl md:text-4xl">{props.article.title}</h1>
           <span
             onClick={profileOnClick}
             className="flex cursor-pointer items-center gap-2"
@@ -57,6 +59,8 @@ export default function ArticleView(props: ArticleViewProps) {
               className="aspect-square w-7 rounded-full border border-slate-100 bg-white"
               src={photo}
               alt=""
+              width={500}
+              height={500}
             />
             <span>{props.article.author?.username}</span>
           </span>
@@ -67,11 +71,11 @@ export default function ArticleView(props: ArticleViewProps) {
               ?.toString()}{" "}
           </span>
         </div>
-        <div className="flex flex-col gap-2 md:flex-row">
-          <div className="flex flex-col gap-1 p-8 text-slate-800 sm:p-16 md:basis-2/3 lg:p-16">
+        <div className="flex flex-col items-center gap-2 xl:flex-row xl:items-start px-2 lg:px-32">
+          <div className="flex flex-col gap-2 p-8 flex-grow text-slate-800 sm:p-16 lg:p-16 w-full xl:w-2/3">
             <ReactMarkdown>{props.article.content}</ReactMarkdown>
           </div>
-          <div className="flex flex-col gap-1 p-8 text-slate-800 sm:p-16 md:basis-1/3 lg:p-16">
+          <div className="flex flex-col gap-2 p-8 text-slate-800 sm:p-16 lg:p-16 w-1/3 ">
             <span className="text-2xl">Suggested content</span>
             <hr />
             No suggestions

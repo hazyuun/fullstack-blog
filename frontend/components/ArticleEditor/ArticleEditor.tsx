@@ -50,8 +50,8 @@ export default function ArticleList(props: ArticleEditorProps) {
         icon={<RiFileTextLine />}
         placeholder="Insert title here"
       />
-      <div className="flex h-screen w-full flex-col gap-2 md:flex-row">
-        <div className="flex basis-1/2 flex-col rounded-md border-slate-200 shadow-md">
+      <div className="flex min-h-screen w-full flex-col gap-2 md:flex-row">
+        <div className="flex w-1/2 flex-col rounded-md border-slate-200 shadow-md">
           <span className="flex items-center gap-2 rounded-t-md bg-slate-100 p-4">
             <RiEditBoxLine /> Edit
           </span>
@@ -59,11 +59,11 @@ export default function ArticleList(props: ArticleEditorProps) {
             value={content}
             placeholder="Insert article content here..."
             onChange={(e) => setContent(e.target.value)}
-            className="flex-grow border border-slate-200 p-4"
+            className="flex-grow border border-slate-200 p-4 h-fit"
           ></textarea>
         </div>
 
-        <div className="flex basis-1/2 flex-col rounded-md border-slate-200 shadow-md">
+        <div className="flex w-1/2 flex-col rounded-md border-slate-200 shadow-md">
           <span className="flex items-center gap-2 rounded-t-md bg-slate-100 p-4">
             <RiEye2Line /> Preview
           </span>

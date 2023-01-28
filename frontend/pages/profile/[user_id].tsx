@@ -43,10 +43,12 @@ export default function Profile(props: ProfileProps) {
               className="aspect-square w-32 rounded-full border border-slate-300 bg-white"
               src={photo}
               alt=""
+              width={500}
+              height={500}
             />
             <div className="flex flex-col items-center gap-2">
               <span className="text-xl">{props.user?.username}</span>
-              <p className="text-slate-500">{props.user?.bio}</p>
+              <div className="text-slate-500">{props.user?.bio}</div>
               <span className="text-md flex gap-4">
                 <span>
                   <b>0</b> following

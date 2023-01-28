@@ -16,28 +16,28 @@ a {
 }
 
 h1 {
-  @apply mt-2;
-  @apply text-3xl
+  @apply sm:text-3xl;
+  @apply text-2xl;
 }
 h2 {
-  @apply mt-2;
-  @apply text-2xl
+  @apply sm:text-2xl;
+  @apply text-xl;
 }
 h3 {
-  @apply mt-2;
-  @apply text-xl
+  @apply sm:text-xl;
+  @apply text-lg;
 }
 h4 {
-  @apply mt-2;
-  @apply text-lg
+  @apply sm:text-lg;
+  @apply text-sm;
 }
 h5 {
-  @apply mt-2;
-  @apply text-sm
+  @apply sm:text-sm;
+  @apply text-xs;
 }
 h6 {
-  @apply mt-2;
-  @apply text-sm
+  @apply sm:text-sm;
+  @apply text-xs;
 }
 
 ul {
@@ -54,3 +54,10 @@ ol li {
   @apply list-inside
 }
 
+pre {
+  @apply rounded-md;
+  @apply p-2;
+  @apply overflow-scroll;
+  @apply bg-slate-200;
+  @apply text-slate-900;
+}

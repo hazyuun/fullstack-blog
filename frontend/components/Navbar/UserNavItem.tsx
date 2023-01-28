@@ -61,6 +61,8 @@ export function UserNavItem(props: UserNavItemProps) {
         className="h-8 w-8 rounded-full border-2 border-teal-500"
         src={profilePicture}
         alt=""
+        width={32}
+        height={32}
       />
 
       <span className="flex items-center gap-1 font-bold">
