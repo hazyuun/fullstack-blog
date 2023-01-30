@@ -12,14 +12,14 @@ export default function NavBar(props: NavBarProps) {
   return (
     <nav
       {...props}
-      className="flex h-14 w-full items-center justify-around shadow-sm lg:px-64"
+      className="flex h-14 w-full items-center justify-around shadow-sm lg:px-32 xl:px-64"
     >
       <Link className="px-8 text-slate-800 no-underline" href="/">
         Blog
       </Link>
 
       <div className="flex flex-grow justify-end gap-2 sm:gap-8 ">
-        <ul className="flex gap-2">
+        <ul className="flex gap-0 sm:gap-2">
           <NavItem className="p-2 px-3 sm:p-1 sm:px-2" href="/" active>
             <RiHome4Fill />
             <span className="hidden sm:flex">Home</span>
@@ -37,7 +37,7 @@ export default function NavBar(props: NavBarProps) {
         {props.user ? (
           <UserNavItem user={props.user} />
         ) : (
-          <ul className="flex gap-2">
+          <ul className="flex gap-2 mr-2 sm:mr-0 sm:px-8 md:px-0">
             <NavItem
               className="rounded-md border border-teal-500"
               href="/register"

@@ -21,7 +21,7 @@ export default function Login() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="relative flex h-screen w-full flex-col justify-center gap-4 p-8 px-16 md:items-center">
+        <div className="relative flex h-screen w-full flex-col justify-center gap-4 p-6 sm:p-8 md:px-16 md:items-center">
           <LoginForm
             onLoginSuccess={onLoginSuccess}
             className="md:w-1/2 lg:w-96"

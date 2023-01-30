@@ -65,7 +65,7 @@ export function UserNavItem(props: UserNavItemProps) {
         height={32}
       />
 
-      <span className="flex items-center gap-1 font-bold">
+      <span className="flex items-center gap-1 font-bold text-ellipsis whitespace-pre">
         {props.user.username}
         <RiArrowDropDownFill size="2rem" />
       </span>

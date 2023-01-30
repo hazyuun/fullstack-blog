@@ -48,8 +48,8 @@ export default function ArticleCard(props: ArticleCardProps) {
         className="max-h-64 w-full rounded-md rounded-b-none"
         src="/article_default.jpg"
         alt=""
-        width={3840}
-        height={2160}
+        width={4096}
+        height={3112}
       />
       <div className="flex flex-grow flex-col p-4">
         <span onClick={cardOnClick} className="text-2xl">

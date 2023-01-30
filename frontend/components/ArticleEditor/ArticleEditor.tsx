@@ -51,7 +51,7 @@ export default function ArticleList(props: ArticleEditorProps) {
         placeholder="Insert title here"
       />
       <div className="flex min-h-screen w-full flex-col gap-2 md:flex-row">
-        <div className="flex w-1/2 flex-col rounded-md border-slate-200 shadow-md">
+        <div className="flex md:w-1/2 flex-col rounded-md border-slate-200 shadow-md">
           <span className="flex items-center gap-2 rounded-t-md bg-slate-100 p-4">
             <RiEditBoxLine /> Edit
           </span>
@@ -63,7 +63,7 @@ export default function ArticleList(props: ArticleEditorProps) {
           ></textarea>
         </div>
 
-        <div className="flex w-1/2 flex-col rounded-md border-slate-200 shadow-md">
+        <div className="flex md:w-1/2 flex-col rounded-md border-slate-200 shadow-md">
           <span className="flex items-center gap-2 rounded-t-md bg-slate-100 p-4">
             <RiEye2Line /> Preview
           </span>

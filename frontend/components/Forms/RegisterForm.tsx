@@ -168,7 +168,7 @@ export default function RegisterForm(props: RegisterFormProps) {
 
       <button
         disabled={form.formState === "Loading"}
-        className="rounded-md bg-teal-500 p-2 pr-4 pl-4 text-white hover:bg-teal-400 disabled:cursor-not-allowed disabled:bg-teal-900"
+        className="rounded-md bg-teal-500 p-2 pr-4 pl-4 text-white hover:bg-teal-400 disabled:cursor-not-allowed disabled:bg-teal-900 md:self-end"
       >
         {form.formState === "Loading" ? (
           <span className="flex items-center justify-center gap-4">

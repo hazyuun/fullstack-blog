@@ -46,8 +46,8 @@ export default function ArticleView(props: ArticleViewProps) {
             className="absolute top-0 left-0 right-0 bottom-0 -z-10 h-full w-full object-cover brightness-50"
             src="/article_default.jpg"
             alt=""
-            width={3840}
-            height={2160}
+            width={4096}
+            height={3112}
           />
 
           <h1 className="text-xl md:text-4xl">{props.article.title}</h1>
